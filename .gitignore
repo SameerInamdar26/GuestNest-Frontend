@@ -7,6 +7,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+<<<<<<< HEAD
+=======
+# Env files
+*.env
+
+>>>>>>> a6dad6702e867ddd0ec2d9284b364d220186df4a
 node_modules
 dist
 dist-ssr

@@ -1,7 +1,10 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useAuth } from "../context/AuthContext";
+<<<<<<< HEAD
 import { FaHome, FaSuitcase, FaConciergeBell, FaGlobe, FaSearch, FaUser, FaBars, FaQuestionCircle } from 'react-icons/fa';
+=======
+>>>>>>> a6dad6702e867ddd0ec2d9284b364d220186df4a
 
 export default function Navbar() {
   const location = useLocation();
@@ -14,6 +17,7 @@ export default function Navbar() {
   const menuRef = useRef(null);
   const btnRef = useRef(null);
 
+<<<<<<< HEAD
   const [searchData, setSearchData] = useState({
     destination: '',
     checkIn: '',
@@ -25,6 +29,8 @@ export default function Navbar() {
     navigate(`/homes?destination=${searchData.destination}&checkIn=${searchData.checkIn}&checkOut=${searchData.checkOut}&guests=${searchData.guests}`);
   };
 
+=======
+>>>>>>> a6dad6702e867ddd0ec2d9284b364d220186df4a
   function openAuth(path) {
     navigate(path, { state: { background: location } });
     setMenuOpen(false);
@@ -150,12 +156,17 @@ export default function Navbar() {
             <div className="flex space-x-10 items-center">
               <Link to="/homes">
                 <div
+<<<<<<< HEAD
                   className={`flex flex-col items-center cursor-pointer ${
+=======
+                  className={`flex items-center cursor-pointer ${
+>>>>>>> a6dad6702e867ddd0ec2d9284b364d220186df4a
                     isActive("/homes")
                       ? "border-b-[3px] border-black text-black font-bold"
                       : ""
                   } hover:text-black`}
                 >
+<<<<<<< HEAD
                   <FaHome className="h-8 w-8 transition-transform duration-300 hover:scale-110" />
                   <span className="text-sm">Homes</span>
                 </div>
@@ -174,6 +185,50 @@ export default function Navbar() {
                     <FaConciergeBell className="h-8 w-8 transition-transform duration-300 hover:scale-110" />
                   <span className="text-sm">Services</span>
                   <span className="text-[10px] bg-rose-500 text-white px-1.5 py-0.5 rounded absolute -top-2 -right-2 font-bold">
+=======
+                  <img
+                    src="/home.png"
+                    alt="Homes"
+                    className="h-20 transition-transform duration-300 hover:scale-110"
+                  />
+                  <span className="text-sm">Homes</span>
+                </div>
+              </Link>
+              <Link to="/experiences">
+                <div
+                  className={`flex items-center cursor-pointer relative ${
+                    isActive("/experiences")
+                      ? "border-b-[3px] border-black font-bold"
+                      : ""
+                  } hover:text-black`}
+                >
+                  <img
+                    src="/experience.png"
+                    alt="Experiences"
+                    className="h-20 transition-transform duration-300 hover:scale-110"
+                  />
+                  <span className="text-sm">Experiences</span>
+                  <span className="text-xs bg-gray-500 text-white px-1 rounded absolute -top-0 left-16">
+                    NEW
+                  </span>
+                </div>
+              </Link>
+              <Link to="/services">
+                <div
+                  className={`flex items-center cursor-pointer relative ${
+                    isActive("/services")
+                      ? "border-b-[3px] border-black font-bold"
+                      : ""
+                  } hover:text-black`}
+                >
+                  <img
+                    src="/service.png"
+                    alt="Services"
+                    className="h-20 transition-transform duration-300 hover:scale-110"
+                  />
+                  <span className="text-sm">Services</span>
+                  <span className="text-xs bg-gray-500 text-white px-1 rounded absolute -top-0 right-12">
+>>>>>>> a6dad6702e867ddd0ec2d9284b364d220186df4a
                     NEW
                   </span>
                 </div>
@@ -192,7 +247,11 @@ export default function Navbar() {
               aria-label="Language and region"
               title="Language and region"
             >
+<<<<<<< HEAD
               <FaGlobe className="h-5 w-5" />
+=======
+              <img src="/world.svg" alt="language" className="h-5" />
+>>>>>>> a6dad6702e867ddd0ec2d9284b364d220186df4a
             </button>
 
             <button
@@ -210,7 +269,11 @@ export default function Navbar() {
                   {user.username.charAt(0).toUpperCase()}
                 </div>
               ) : (
+<<<<<<< HEAD
                 <FaBars className="h-5 w-5" />
+=======
+                <img src="/menu.svg" alt="menu" className="h-5" />
+>>>>>>> a6dad6702e867ddd0ec2d9284b364d220186df4a
               )}
             </button>
 
@@ -233,7 +296,13 @@ export default function Navbar() {
                     onClick={() => setMenuOpen(false)}
                     className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50"
                   >
+<<<<<<< HEAD
                     <FaQuestionCircle className="w-5 h-5 rounded-full border border-gray-300 text-gray-600" />
+=======
+                    <span className="flex items-center justify-center w-5 rounded-full border border-gray-300 text-gray-600 text-sm font-medium">
+                      ?
+                    </span>
+>>>>>>> a6dad6702e867ddd0ec2d9284b364d220186df4a
                     <span className="font-semibold text-gray-800">
                       Help Centre
                     </span>
@@ -254,11 +323,23 @@ export default function Navbar() {
                         It's easy to List your property and earn extra income
                       </p>
                     </div>
+<<<<<<< HEAD
                     <FaHome className="w-12 h-12 text-gray-400" />
+=======
+                    <img
+                      src="/home.png"
+                      alt="Host"
+                      className="w-12 h-12 object-contain"
+                    />
+>>>>>>> a6dad6702e867ddd0ec2d9284b364d220186df4a
                   </Link>
 
                   <hr className="my-1" />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a6dad6702e867ddd0ec2d9284b364d220186df4a
                   {ready && user && (
                     <>
                       <hr className="my-3" />
@@ -338,6 +419,7 @@ export default function Navbar() {
         {compact ? (
           <div className="flex justify-center mt-2">
             <div className="flex items-center gap-3 rounded-full shadow-md bg-white px-4 py-2 border">
+<<<<<<< HEAD
               <input 
                 type="text" 
                 placeholder="Anywhere"
@@ -375,6 +457,17 @@ export default function Navbar() {
                 className="ml-2 p-2 rounded-full bg-rose-500 hover:bg-rose-600 transition"
               >
                 <FaSearch className="w-4 h-4 text-white" />
+=======
+              <button className="text-sm font-medium px-2">Anywhere</button>
+              <span className="h-5 w-px bg-gray-300" />
+              <button className="text-sm font-medium px-2">Anytime</button>
+              <span className="h-5 w-px bg-gray-300" />
+              <button className="text-sm font-medium px-2 text-gray-600">
+                Add guests
+              </button>
+              <button className="ml-2 p-2 rounded-full bg-rose-500">
+                <img src="/search.svg" alt="Search" className="w-4 white" />
+>>>>>>> a6dad6702e867ddd0ec2d9284b364d220186df4a
               </button>
             </div>
           </div>
@@ -382,6 +475,7 @@ export default function Navbar() {
           <div className="flex justify-center mt-4">
             <div className="w-[850px] flex rounded-full shadow-md overflow-hidden bg-white border p-1 px-2">
               <div className="flex-1 px-4 py-2 border-r">
+<<<<<<< HEAD
                 <p className="text-xs font-medium">Where</p>
                 <input 
                   type="text" 
@@ -428,6 +522,26 @@ export default function Navbar() {
                   className="bg-rose-500 text-white p-3 rounded-full hover:bg-rose-600 transition"
                 >
                   <FaSearch className="w-4 h-4 text-white" />
+=======
+                <p className="text-xs">Where</p>
+                <p className="text-sm text-gray-500">Search destinations</p>
+              </div>
+              <div className="flex-1 px-4 py-2 border-r">
+                <p className="text-xs">Check in</p>
+                <p className="text-sm text-gray-500">Add dates</p>
+              </div>
+              <div className="flex-1 px-4 py-2 border-r">
+                <p className="text-xs">Check out</p>
+                <p className="text-sm text-gray-500">Add dates</p>
+              </div>
+              <div className="flex-1 px-4 py-2 flex items-center justify-between pr-4">
+                <div>
+                  <p className="text-xs">Who</p>
+                  <p className="text-sm text-gray-500">Add guests</p>
+                </div>
+                <button className="bg-rose-500 text-white p-3 rounded-full ">
+                  <img src="/search.svg" alt="Search" className="w-4 white" />
+>>>>>>> a6dad6702e867ddd0ec2d9284b364d220186df4a
                 </button>
               </div>
             </div>
@@ -436,4 +550,8 @@ export default function Navbar() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a6dad6702e867ddd0ec2d9284b364d220186df4a
